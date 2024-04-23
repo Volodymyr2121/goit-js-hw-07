@@ -10,7 +10,7 @@ const buttonCreate = controls.querySelector('[data-create]');
 const buttonDestroy = controls.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes')
  
-
+const arrayBoxes = [];
 function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
@@ -18,10 +18,10 @@ function createBoxes(amount) {
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
-
-    boxes.append(box);
+    arrayBoxes.push(box);
+    
   }
-  
+  boxes.append(...arrayBoxes);
 }
 
   function destroyBoxes() {

@@ -40,3 +40,5 @@ buttonCreate.addEventListener('click', (event) => {
 })
 buttonDestroy.addEventListener('click', destroyBoxes);
  boxes.classList.add('box-list')
+
+
